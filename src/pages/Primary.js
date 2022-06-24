@@ -1,7 +1,7 @@
 import {Button, TextInput, StyleSheet, View, Text} from 'react-native';
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {addName} from '../store/actions/names';
+import {addName} from '../store/names';
 
 const Primary = () => {
   const dispatch = useDispatch();

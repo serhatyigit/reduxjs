@@ -1,17 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
-import namereducer from './store/reducers/names';
+import configureStore from './store/store';
 import Primary from './pages/Primary';
 import Secondary from './pages/Secondary';
 
 const App = () => {
-  const store = configureStore({
-    reducer: namereducer,
-  });
-
+  const store = configureStore();
   const Tab = createBottomTabNavigator();
 
   return (
